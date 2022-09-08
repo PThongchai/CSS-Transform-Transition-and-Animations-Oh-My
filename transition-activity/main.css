@@ -6,13 +6,35 @@ body  {
 }
 
 .caption {
-  width: 80%;
+  width: 90%;
   margin: auto;
   overflow: hidden;
+  text-align: left;
+position: relative;
+}
+
+.title{
+  position: absolute;
+  bottom: -90px;
+  color: white;
+  margin: 0 20px;
 }
 
 img {
-  width: 80%;
+  /* width: 80%; */
+  width: 700px;
+  max-height: 500px;
+
+}
+.caption:hover > div.title{
+  animation-name: title-moveup;
+  animation-duration: 2s;
+  animation-fill-mode:forwards ;
+}
+
+@keyframes title-moveup{
+  from{ transform: translateY(0);}
+  to{ transform: translateY(-400px); }
 }
 
 button {
